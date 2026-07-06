@@ -45,11 +45,12 @@ img {
 
 .nav__container {
     width: 100%;
-    max-width: 720px;
+    max-width: 1280px;
     padding: 0 24px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    margin: 0 64px;
+    justify-content: space-between;
 }
 
 .nav__logo {
@@ -159,7 +160,7 @@ header {
 }
 
 .header__img--wrapper {
-    width: 100%;
+    width: 50%;
     max-width: 720px;
     margin: 0 auto;
     display: flex;
@@ -199,11 +200,13 @@ header {
 }
 
 .header__email--btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #6415ff;
     color: #fff;
     border-radius: 500px;
-    margin: 8px;
-    height: calc(100% - 4px);
     padding: 16px 32px;
     text-decoration: none;
     font-weight: bold;
@@ -217,6 +220,7 @@ header {
 header .row {
     display: flex;
     justify-content: space-between;
+    gap: 48px;
 }
 
 .header__customers--title {
