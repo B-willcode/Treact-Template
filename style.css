@@ -192,7 +192,10 @@ header {
     border: 1px solid #243e63;
     color: rgb(98, 131, 178);
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     padding: 20px 192px 16px 32px;
     transition: border-color 300ms;
     z-index: 1;
@@ -209,7 +212,7 @@ header {
     border-radius: 500px;
     padding: 16px 32px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
     width: 160px;
     border: none;
@@ -237,4 +240,46 @@ header .row {
     display: flex;
     justify-content: space-between;
     opacity: 0.5;
+}
+
+#features {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.row__narrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.features__tag {
+    font-size: 16px;
+    color: #6415ff;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section__title {
+    font-size: 56px;
+    font-weight: 800;
+    color: rgb(36, 62, 99);
+    line-height: 1.5;
+    margin: 16px 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.section__para {
+    font-size: 18px;
+    font-weight: 500;
+    color: #7c8ba1;
+    line-height: 1.6;
+    max-width: 720px;
+    text-align: center;
 }
