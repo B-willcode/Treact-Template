@@ -130,7 +130,73 @@ button {
 
 .nav__link--primary:hover {
     text-decoration: none;
-}    
+}
+
+.menu {
+    position: absolute;
+    background-color: #b0a4a4;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 500px;
+    z-index: 4;
+    transition: all 300ms ease;
+    visibility: hidden;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.menu--open .menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    border: none;
+    display: none;
+    color: #7342d6;
+    transition: all 300ms ease;
+}
+
+.btn__menu--close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px;
+    color: white;
+}
+
+.menu__links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__link {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    margin-top: 36px;
+}
+
+.menu__link--primary {
+    color: #f7fafc;
+    padding: 12px 32px;
+    background: #6415ff;
+    border-radius: 500px;
+    border: none;
+}
 
 h1 {
     font-size: 36px;
@@ -702,6 +768,11 @@ Pricing
     letter-spacing: 0.05em;
 }
 
+.plan__button:hover {
+    transform: translate(1px, -1px);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.4) 0pc 10px 10px -5px;
+}
+
 .plan:nth-child(2) .plan__name, .plan:nth-child(2) .plan__price, .plan:nth-child(2) .plan__target, .plan:nth-child(2) .plan__duration, .plan:nth-child(2) .plan__feature {
     color: #f7fafc;
 }
@@ -826,6 +897,10 @@ Testimonials
     transition: all 300ms ease;
 }
 
+.testimonial__button:hover {
+    background-color: #a6b1bb;
+}
+
 .fa-arrow-left {
     color: rgba(99, 23, 199, 0.945);
 }
@@ -838,4 +913,254 @@ Testimonials
     width: 0.5px;
     background-color: #becddd;
     height: 24px;
+}
+
+/*
+
+Start
+
+*/
+
+#start .row {
+    position: relative;
+    overflow: hidden;
+}
+
+.start__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 96px 0;
+    width: 100%;
+    background-color: rgb(100, 21, 255);
+    border-radius: 8px;
+}
+
+.start__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 32px;
+}
+
+.start__title {
+    color: #f7fafc;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+    width: 50%;
+    z-index: 2;
+}
+
+.start__buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.start__button {
+    padding: 20px 40px;
+    border-radius: 500px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #f7fafc;
+    line-height: 1.5;
+    margin: 1px;
+}
+
+.start__button:nth-child(1) {
+    background: #f56565;
+    margin-right: 32px;
+    transition: all 300ms ease;
+}
+
+.start__button:hover:nth-child(1) {
+    background-color: #ba2f2f;
+}
+
+.start__button:nth-child(2) {
+    border: 1px solid rgb(160, 174, 192);
+    transition: all 300ms ease;
+}
+
+.start__button:hover:nth-child(2) {
+    background-color: white;
+    color: rgba(100, 21, 255);
+}
+
+/*
+
+FOOTER
+
+*/
+
+footer {
+    padding: 96px 32px;
+    background-color: rgb(100, 21, 255);
+    margin-bottom: -32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer__columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -48px;
+    flex-wrap: wrap;
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 48px;
+}
+
+.footer__column--title {
+    color: #f7fafc;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.footer__column--link {
+    color: #f7fafc;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+.footer__column--link:hover {
+    text-decoration: underline;
+    transition: all 300ms ease;
+}
+
+.footer__divider {
+    width: 100%;
+    height: 2px;
+    margin: 64px 0;
+    background: rgb(116, 44, 255);
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer__logo--img {
+    height: 32px;
+    width: 32px;
+}
+
+.footer__logo--text {
+    color: #f7fafc;
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 8px;
+    letter-spacing: 1.625px;
+}
+
+.footer__copyright {
+    color: #d8dfe4;
+    font-weight: 600;
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+    margin-left: -16px;
+}
+
+.footer__social--link {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background: #f7fafc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 300ms ease;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.footer__social--link:hover {
+    background-color: #b5c0ce;
+}
+
+
+
+
+/*small phones, large smartphones */
+@media (max-width: 550px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    header .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__description {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 512px;
+        margin: 0 auto;
+    }
+
+    .header__img--wrapper {
+        width: 100%;
+        max-width: 512px;
+        margin: 0 auto;
+    }
+
+    #features .section__title, #pricing .section__title {
+        font-size: 48px;
+    }
+
+    .section__para {
+        font-size: 14px;
+    }
+
+    .features {
+        justify-content: center;
+    }
+
+    .feature {
+        width: auto;
+        max-width: 348px;
+    }
+}
+
+/* small phones, tablets, large smartphones */
+@media (max-width: 768px) {
+    header .row {
+        align-items: flex-end;
+    }
+
+    .section__para {
+        font-size: 16px;
+    }
+
+    .features {
+        max-width: 768px;
+    }
 }
